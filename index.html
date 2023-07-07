@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travelio - Travel Booking System</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Travelio</h1>
+  </header>
+
+  <main>
+    <section id="booking">
+      <h2>Book Your Travel</h2>
+      <form id="booking-form" onsubmit="submitBooking(event)">
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" required>
+        
+        <label for="departure-date">Departure Date:</label>
+        <input type="date" id="departure-date" required>
+        
+        <label for="return-date">Return Date:</label>
+        <input type="date" id="return-date" required>
+        
+        <label for="passengers">Passengers:</label>
+        <input type="number" id="passengers" min="1" required>
+        
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <section id="booking-details" style="display: none;">
+      <h2>Booking Details</h2>
+      <p>Destination: <span id="destination-details"></span></p>
+      <p>Departure Date: <span id="departure-date-details"></span></p>
+      <p>Return Date: <span id="return-date-details"></span></p>
+      <p>Passengers: <span id="passengers-details"></span></p>
+      <p id="booking-status"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
